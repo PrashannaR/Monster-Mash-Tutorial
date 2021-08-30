@@ -40,6 +40,8 @@
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Monster.cs" />
      <Compile Include="Assets\Scripts\MonsterSpawnner.cs" />
+     <Compile Include="Assets\Scripts\Collector.cs" />
+     <Compile Include="Assets\Scripts\MainMenuController.cs" />
      <None Include="Assets\Fonts\font info.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    
     public float moveForce = 10f;
     public float jumpForce = 11f;
     public float maxVelocity = 22f;
@@ -16,6 +17,7 @@ public class Player : MonoBehaviour
     public string Walk_Animation = "Walk";
     private bool isgrounded;
     private string Ground_Tag = "GroundTag";
+    private string Enemy_Tag = "Enemy";
 
     private void Awake() {
         myBody = GetComponent<Rigidbody2D>();
@@ -78,9 +80,17 @@ public class Player : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
+        //checking ground
         if(other.gameObject.CompareTag(Ground_Tag)){
                 isgrounded = true;
                 Debug.Log("Landed");
+        }
+
+        //destroy player 
+        //destorys the player when it collides with anything attached to the enemy tag
+        if (other.gameObject.CompareTag(Enemy_Tag)){
+            Destroy(gameObject);
+
         }
     }
 
