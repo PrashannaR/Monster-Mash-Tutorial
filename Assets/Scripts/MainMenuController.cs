@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
+    //switches scene from main menu to gameplay
     public void PlayGame(){
         SceneManager.LoadScene("Gameplay");
     }
