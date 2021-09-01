@@ -7,7 +7,17 @@ public class MainMenuController : MonoBehaviour
 {
     //switches scene from main menu to gameplay
     public void PlayGame(){
-        SceneManager.LoadScene("Gameplay");
+        
+        //shows the name of the button clicked & converts to integer
+        
+        int selectedPlayer = 
+            int .Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
+
+        GameManager.instance.CharIndex = selectedPlayer;
+        
+        
+        
+          SceneManager.LoadScene("Gameplay");
     }
 
 

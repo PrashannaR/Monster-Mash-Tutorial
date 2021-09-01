@@ -343,6 +343,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
 "Assets/Scripts/CameraFollow.cs"
 "Assets/Scripts/Collector.cs"
+"Assets/Scripts/GameManager.cs"
 "Assets/Scripts/MainMenuController.cs"
 "Assets/Scripts/Monster.cs"
 "Assets/Scripts/MonsterSpawnner.cs"
