@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
         }
     }
     
+    
     //instance of MonoBehavious class
         private void Awake() {
         if(instance == null){
@@ -48,7 +49,12 @@ private void OnEnable() {
 private void OnDisable() {
     SceneManager.sceneLoaded -= onLevelFinishedLoading;
 }
+
+//will allow the user to select character
   void onLevelFinishedLoading(Scene scene, LoadSceneMode mode){
 
+        if(scene.name == "Gameplay"){
+            Instantiate(players[CharIndex]);
+        }
   }
 }//class
